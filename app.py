@@ -32,7 +32,7 @@ def predict():
     output = prediction
     
     if output == 1:
-        return render_template('index.html', prediction_text='78% Sure You Have Diabetes')
+        return render_template('index.html', prediction_text='78% Sure! You Have Diabetes')
     else:
         return render_template('index.html', prediction_text='78% Sure! You Dont Have Diabetes')
 
@@ -48,4 +48,4 @@ def predict_api():
     return jsonify(output)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host= '0.0.0.0', debug=True,)
